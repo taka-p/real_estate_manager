@@ -1,5 +1,6 @@
 class DemandListController < ApplicationController
   def index
+    @DemandLists = DemandList.all
   end
 
   def import_csv_new

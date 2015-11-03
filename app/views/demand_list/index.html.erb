@@ -1,4 +1,40 @@
 <h1>顧客要望一覧TOP</h1>
 
+<table>
+  <tr>
+    <th>要望管理番号</th>
+    <th>顧客名</th>
+    <th>所在地名1</th>
+    <th>所在地名2</th>
+    <th>物件タイプ</th>
+    <th>価格</th>
+    <th>沿線略称</th>
+    <th>駅名</th>
+    <th>徒歩（分）</th>
+    <th>土地面積</th>
+    <th>建物面積</th>
+    <th>専有面積</th>
+    <th>登録日時</th>
+    <th>更新日時</th>
+  </tr>
+  <% @DemandLists.each do |item| %>
+  <tr>
+    <td><%= item.id  %></td>
+    <td><%= item.customer_name  %></td>
+    <td><%= item.address_1  %></td>
+    <td><%= item.address_2  %></td>
+    <td><%= item.estate_type  %></td>
+    <td><%= item.price  %></td>
+    <td><%= item.wayside  %></td>
+    <td><%= item.station  %></td>
+    <td><%= item.walking_time  %></td>
+    <td><%= item.land_area  %></td>
+    <td><%= item.building_area  %></td>
+    <td><%= item.exclusive_area  %></td>
+    <td><%= item.created_at  %></td>
+    <td><%= item.updated_at  %></td>
+  </tr>
+  <% end %>
+</table>
 
 <%= link_to 'ホームに戻る', home_index_path %>
