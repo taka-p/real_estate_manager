@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025061217) do
+ActiveRecord::Schema.define(version: 20151103080341) do
+
+  create_table "demand_lists", force: :cascade do |t|
+    t.string   "customer_name"
+    t.string   "address_1"
+    t.string   "address_2"
+    t.integer  "estate_type"
+    t.integer  "price"
+    t.string   "wayside"
+    t.string   "station"
+    t.integer  "walking_time"
+    t.float    "land_area"
+    t.float    "building_area"
+    t.float    "exclusive_area"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"
