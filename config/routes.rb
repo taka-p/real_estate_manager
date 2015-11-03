@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  resources :demand_list do
+    collection do
+      get 'import_csv_new'
+      post 'import_csv'
+    end
+  end
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
 
+  get 'home/index'
   root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -9,4 +9,8 @@
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
 <% end %>
 
+<% if user_signed_in? %>
+<%= link_to '顧客要望一覧のCSVをアップロード', import_csv_new_demand_list_index_path, :class => 'btn' %>
+<% end %>
+
 <p>Find me in app/views/home/index.html.erb</p>
