@@ -17,4 +17,4 @@
 /tmp
 
 # Ignore gemset
-/vender/bundle
+/vendor/bundle
